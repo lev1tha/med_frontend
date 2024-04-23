@@ -1,0 +1,259 @@
+.popular_cart {
+  width: 100%;
+
+  &_inner {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  img {
+    height: 598px;
+    object-fit: cover;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid rgb(252, 182, 12);
+  }
+
+  &_info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &_titles {
+      &_title {
+        color: rgb(32, 32, 32);
+      }
+
+      &_text {
+        color: rgb(32, 32, 32);
+        opacity: 0.6;
+      }
+    }
+
+    &_btn {
+      background: rgb(252, 182, 12);
+      padding: 11px 16px;
+      cursor: pointer;
+
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+  }
+
+  &_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.catalog_cart {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid rgb(252, 182, 12);
+  position: relative;
+  cursor: pointer;
+
+  &_love {
+    padding: 12px 12px 0px 0px;
+    cursor: pointer;
+  }
+
+  &_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  &_stars {
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 4px;
+    box-sizing: border-box;
+    border-right: 1px solid rgb(252, 182, 12);
+    border-bottom: 1px solid rgb(252, 182, 12);
+    background: rgb(255, 255, 255);
+  }
+
+  &_desc {
+    display: flex;
+    justify-content: center;
+  }
+
+  &_inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  img {
+    height: 315px;
+    object-fit: cover;
+    width: 100%;
+
+    box-sizing: border-box;
+    border-bottom: 1px solid rgb(252, 182, 12);
+  }
+
+  &_info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    box-sizing: border-box;
+    border-top: 1px solid rgb(252, 182, 12);
+
+    &_titles {
+      &_title {
+        color: rgb(32, 32, 32);
+        font-weight: 500;
+        padding: 8px 16px;
+      }
+
+      &_text {
+        color: rgb(32, 32, 32);
+        opacity: 0.6;
+      }
+    }
+
+    &_btn {
+      background: rgb(252, 182, 12);
+      padding: 11px 16px;
+      cursor: pointer;
+
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+  }
+
+  &_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.product__cat {
+  width: 100%;
+  overflow: hidden;
+
+  .top {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 8px;
+    position: relative;
+    z-index: 10;
+
+    span {
+      &.deactivate svg {
+        transform: rotate(180deg);
+
+        g {
+          opacity: 1;
+        }
+      }
+
+      svg {
+        transform: rotate(0deg);
+
+        g {
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+    gap: 8px;
+
+    .delet {
+      font-family: "Sofia Sans", sans-serif;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 150%;
+      color: #202020;
+      text-align: right;
+      opacity: 0.4;
+      padding-top: 8px;
+      cursor: pointer;
+    }
+  }
+}
+
+.cart_product_card {
+  border: 1px solid #fcb60c;
+  display: flex;
+
+  >img {
+    max-width: 250px;
+    width: 100%;
+    aspect-ratio: 25 / 12;
+    height: auto;
+  }
+
+  .content {
+    flex-direction: column;
+    display: flex;
+    border-left: 1px solid #fcb60c;
+    position: relative;
+
+    svg {
+      position: absolute;
+      right: 4px;
+      top: 4px;
+
+      >g {
+        display: none;
+      }
+    }
+
+    .title {
+      flex: 1;
+      padding: 16px;
+    }
+
+    .bottom {
+      border-top: 1px solid #fcb60c;
+      width: 100%;
+      display: flex;
+
+      >div {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 44px;
+        gap: 4px;
+      }
+
+      .border_right {
+        border-right: 1px solid #fcb60c;
+        height: auto;
+
+        span {
+          padding-top: 5px;
+
+          &:nth-child(1) svg {
+            transform: rotate(-90deg);
+          }
+
+          &:nth-child(2) svg {
+            transform: rotate(90deg);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.header {
+    background: rgb(32, 32, 32);
+    padding: 0px 20px;
+    z-index: 100;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+
+    &_inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 24px 0px 22px 0px;
+        width: 100%;
+    }
+
+    &_left {
+        display: flex;
+        align-items: center;
+        gap: 100px;
+        width: 100%;
+    }
+
+    &_right {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+
+    &_buttons {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .nav {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        width: 100%;
+
+        &_bar {
+            cursor: pointer;
+            opacity: 0.8;
+            color: white;
+        }
+    }
+}

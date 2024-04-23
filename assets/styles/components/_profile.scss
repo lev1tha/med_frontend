@@ -1,0 +1,29 @@
+.profile_layout {
+  padding: 36px 0;
+  min-height: calc(100vh - 436px);
+
+  .url {
+    padding-bottom: 36px;
+  }
+
+  .content {
+    display: flex;
+    gap: 80px;
+    padding-top: 36px;
+
+    aside {
+      width: 284px;
+    }
+  }
+
+  .personal_data {
+    max-width: 716px;
+    width: 100%;
+    .inputs {
+      width: 100%;
+      .input{
+        display: flex;
+      }
+    }
+  }
+}
