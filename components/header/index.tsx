@@ -20,7 +20,7 @@ export const Header = () => {
           </div>
           <div className="header_right flex items-center gap-6">
             <Link
-              href="/catalog"
+              href="/market"
               style={{
                 textDecoration: "none",
               }}

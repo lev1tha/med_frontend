@@ -82,3 +82,12 @@
   height: 0;
   background-color: transparent;
 }
+
+*{ 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: .4s ease-in-out;
+  text-decoration: none;
+  
+}
