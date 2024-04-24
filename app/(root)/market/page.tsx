@@ -1,9 +1,21 @@
-import React from 'react'
+"use client";
+
+import React from "react";
+import { usePathname } from "next/navigation";
+
+import { Breadcrumbs, BreadType } from "@/components/breadcrumbs";
 
 const Market = () => {
+  const pathname = usePathname();
   return (
-    <div>Pages</div>
-  )
-}
+    <div>
+      <Breadcrumbs
+        pathname={pathname}
+        classNames={"flex items-center "}
+        variant={BreadType.withslesh}
+      />
+    </div>
+  );
+};
 
-export default Market
+export default Market;
