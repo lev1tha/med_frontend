@@ -10,7 +10,7 @@ const Market = () => {
 
   const [select, setSelect] = useState("Высшего сорта");
   const [sSelect, setSselect] = useState("Натуральная");
-  
+
   return (
     <>
       <div>
@@ -53,10 +53,10 @@ const Market = () => {
               className="font-sofia outline-none border-none"
               onChange={(event) => setSelect(event.target.value)}
             >
-              <option value="высшего сорта">Высшего сорта</option>
-              <option value="второй сорт">Второй сорт</option>
-              <option value="третего сорта">Третего сорта</option>
-              <option value="остаток">Остаток</option>
+              <option value="Высшего сорта">Высшего сорта</option>
+              <option value="Второй сорт">Второй сорт</option>
+              <option value="Третего сорта">Третего сорта</option>
+              <option value="Остаток">Остаток</option>
             </select>
           </form>
 
@@ -67,9 +67,9 @@ const Market = () => {
               className="font-sofia outline-none border-none"
               onChange={(event) => setSselect(event.target.value)}
             >
-              <option value="нарульное">Нарульное</option>
-              <option value="химическая">Химическая</option>
-              <option value="обработка">Обработка</option>
+              <option value="Нарульное">Нарульное</option>
+              <option value="Химическая">Химическая</option>
+              <option value="Обработка">Обработка</option>
             </select>
           </form>
         </div>
