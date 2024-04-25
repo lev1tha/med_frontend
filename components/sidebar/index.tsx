@@ -42,10 +42,10 @@ const index = ({ title }: PropsType) => {
 
   return (
     <div className={`${choised ? 'layout_active' : 'layout'} w-fit`}>
-      <div className="layout_inner">
+      <div className={`${choised ? 'layout_inner_active' : 'layout_inner'} w-fit`}>
         <div className="flex flex-col select-none">
           <div
-            className="selectedFilterOne w-[170px] max-w-full font-sofia text-2xl font-bold"
+            className="selectedFilterOne w-[170px] max-w-full font-sofia text-2xl font-semi"
             onClick={handleChangedChoise}
           >
             <form action="" onClick={handleChangedChoise}>

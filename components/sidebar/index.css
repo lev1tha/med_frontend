@@ -1,13 +1,13 @@
 .layout {
   /* padding: 14px 20px; */
-  clip-path: polygon(10% 0%, 100% 0%, 100% 90%, 87% 100%, 0% 100%, 0% 9%);
+  clip-path: polygon(10% 0%, 100% 0%, 100% 70%, 86% 100%, -1% 100%, 0% 31%);
   margin-bottom: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 60px;
-  transition: 0.3s;
-  background-color: black;
+  transition: 0.5s ease-in-out;
+  background-color: #fcb60c;
 }
 
 .layout_active {
@@ -17,14 +17,24 @@
   justify-content: center;
   align-items: center;
   height: 224px;
-  transition: 0.3s;
-  background-color: black;
+  transition: 0.5s ease-in-out;
+  background-color: #fcb60c;
 }
 
 .layout_inner {
   background-color: white;
   padding: 14px 20px;
   width: calc(100% - 2px);
-  clip-path: polygon(10% 0%, 100% 0%, 100% 90%, 87% 100%, 0% 100%, 0% 9%);
+  clip-path: polygon(10% 0%, 100% 0%, 100% 70%, 86% 100%, -1% 100%, 0% 31%);
   height: calc(100% - 2px);
+  transition: 0.5s ease-in-out;
+}
+
+.layout_inner_active {
+  clip-path: polygon(10% 0%, 100% 0%, 100% 90%, 87% 100%, 0% 100%, 0% 9%);
+  background-color: white;
+  padding: 14px 20px;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  transition: 0.5s ease-in-out;
 }
