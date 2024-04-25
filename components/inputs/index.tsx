@@ -84,7 +84,7 @@ export const CheckBoxCart = ({
 }: CheckBoxCartProps) => {
   return (
     <div style={style} className="checkbox_cart">
-      <div>{checked ? <Checked /> : <div></div>}</div>
+      <div>{checked && <Checked /> }</div>
       <span className={fontSize}>{text}</span>
     </div>
   );

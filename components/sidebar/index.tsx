@@ -41,21 +41,23 @@ const index = ({ title }: PropsType) => {
   };
 
   return (
-    <div className="layout">
-      <div className="flex flex-col select-none">
-        <div
-          className="selectedFilterOne w-[170px] max-w-full font-sofia text-2xl font-bold"
-          onClick={handleChangedChoise}
-        >
-          <form action="" onClick={handleChangedChoise}>
-            <p>{title}</p>
-          </form>
-        </div>
-        <div className={cn(choised ? "my-8" : "hidden")}>
-          {choised &&
-            filterOneValue.map((value, index) => (
-              <SidebarValue value={value.value} key={index} />
-            ))}
+    <div className={`${choised ? 'layout_active' : 'layout'} w-fit`}>
+      <div className="layout_inner">
+        <div className="flex flex-col select-none">
+          <div
+            className="selectedFilterOne w-[170px] max-w-full font-sofia text-2xl font-bold"
+            onClick={handleChangedChoise}
+          >
+            <form action="" onClick={handleChangedChoise}>
+              <p>{title}</p>
+            </form>
+          </div>
+          <div className={cn(choised ? "my-6" : "hidden")}>
+            {choised &&
+              filterOneValue.map((value, index) => (
+                <SidebarValue value={value.value} key={index} />
+              ))}
+          </div>
         </div>
       </div>
     </div>

@@ -13,7 +13,7 @@ const SidebarValue = ({ value, index }: any) => {
         className="checked flex gap-6 font-sofia mt-2 text-xl font-medium"
         onClick={handleChangeChecked}
       >
-        {value.id === index ? <CheckBoxCart checked={checked} /> : null}
+        {value.id === index ? <CheckBoxCart checked={checked} /> : (<input type="radio"/>)}
         {value}
       </div>
     </div>

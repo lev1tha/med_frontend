@@ -29,11 +29,6 @@ const Market = () => {
           </div>
           <Breadcrumbs
             pathname={pathname}
-            classNames="text-xl font-sofia text-gray-500"
-            variant={BreadType.withx}
-          />
-          <Breadcrumbs
-            pathname={pathname}
             variant={BreadType.filter}
             stateSelect={select}
             classNames="text-xl font-sofia text-gray-500"
