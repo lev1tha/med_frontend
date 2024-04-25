@@ -3,12 +3,14 @@ import { useState, useRef } from "react";
 import { usePathname } from "next/navigation";
 
 import { Breadcrumbs, BreadType } from "@/components/breadcrumbs";
+import Sidebar from "@/components/sidebar";
 
 const Market = () => {
   const pathname = usePathname();
 
   const [select, setSelect] = useState("Высшего сорта");
-  console.log(select);
+  const [sSelect, setSselect] = useState("Натуральная");
+  
   return (
     <>
       <div>
@@ -36,21 +38,47 @@ const Market = () => {
             stateSelect={select}
             classNames="text-xl font-sofia text-gray-500"
           />
+          <Breadcrumbs
+            pathname={pathname}
+            variant={BreadType.filter}
+            stateSelect={sSelect}
+            classNames="text-xl font-sofia text-gray-500"
+          />
         </div>
-        <form action="" id="firstSelector">
-          <select
-            name=""
-            id="firstSelector"
-            className="font-sofia outline-none border-none"
-            onChange={(event) => setSelect(event.target.value)}
-          >
-            <option value="высшего сорта">Высшего сорта</option>
-            <option value="второй сорт">Второй сорт</option>
-            <option value="третего сорта">Третего сорта</option>
-            <option value="остаток">Остаток</option>
-          </select>
-        </form>
+        <div className="filtration flex gap-5">
+          <form action="" id="firstSelector" className="max-w-[160px] w-full">
+            <select
+              name=""
+              id="firstSelector"
+              className="font-sofia outline-none border-none"
+              onChange={(event) => setSelect(event.target.value)}
+            >
+              <option value="высшего сорта">Высшего сорта</option>
+              <option value="второй сорт">Второй сорт</option>
+              <option value="третего сорта">Третего сорта</option>
+              <option value="остаток">Остаток</option>
+            </select>
+          </form>
+
+          <form action="" id="firstSelector" className="max-w-[160px] w-full">
+            <select
+              name=""
+              id="secondSelector"
+              className="font-sofia outline-none border-none"
+              onChange={(event) => setSselect(event.target.value)}
+            >
+              <option value="нарульное">Нарульное</option>
+              <option value="химическая">Химическая</option>
+              <option value="обработка">Обработка</option>
+            </select>
+          </form>
+        </div>
       </div>
+      <section>
+        <Sidebar title={"Ноги"} />
+        <Sidebar title={"Мозги"} />
+        <Sidebar title={"Голова"} />
+      </section>
     </>
   );
 };
